@@ -22,27 +22,31 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">タイトル</label>
+                        <label class="col-md-2" for="body">氏名(name)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">本文</label>
+                        <label class="col-md-2" for="body">性別(gender)</label>
                         <div class="col-md-10">
+                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
+                        </div>   
+                    </div>       
+                    <div class="form-group row">
+                        <label class="col-md-2" for="body">趣味(hobby)</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
+                        </div>
+                    </div>        
+                    <div class="form-group row">
+                        <label class="col-md-2" for="body">自己紹介欄(introduction)</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
+                        </div>
+                    </div>            　
                             
-                            <textarea class="form-control" name="body" rows="20">{{ old('body') }}
-                            1．氏名(name)：タワラ　マサミ
-                            
-                            2．性別(gender)：女
-                            
-                            3．趣味(hobby)：料理
-                            
-                            4．自己紹介欄(introduction)：
-                            　　　プログラミング言語を学ぶ一児の母です
-                        　
-                            
-                            </textarea>
+                         
                            
                         </div>
                     </div>
