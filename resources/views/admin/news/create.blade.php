@@ -46,19 +46,3 @@
         </div>
     </div>
 @endsection
-
-
-<title></title>
-    </head>
-    <body>
-        <header>
-            <h1></h1>
-        </header>
-        
-        <main>
-            <h2></h2>
-            <pre>
-            </pre>
-        </main>
-    </body>
-</html>
