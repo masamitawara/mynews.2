@@ -46,11 +46,7 @@
 
                         <!-- Right Side Of Navbar -->
                          <ul class="navbar-nav ml-auto">
-<<<<<<< HEAD
                         
-=======
-                         
->>>>>>> bfcf64b8ad3fc86cc735e185e5da3be20cf795d0
                          <!-- Authentication Links -->
                         {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                         @guest
@@ -74,14 +70,9 @@
                                     </form>
                                 </div>
                             </li>
-<<<<<<< HEAD
                             @endguest
                          
                     
-=======
-                            @endguest 
-                        
->>>>>>> bfcf64b8ad3fc86cc735e185e5da3be20cf795d0
                         </ul>
                     </div>
                 </div>
