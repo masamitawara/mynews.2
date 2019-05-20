@@ -1,6 +1,6 @@
 
 　　　　{{-- layouts/profile.blade.phpを読み込む --}}
-@extends('layouts.profile')
+@extends('layouts.admin')
 
 
 {{-- profile.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
@@ -42,7 +42,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="body">自己紹介欄(introduction)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
+                            <textarea class="form-control" name="body" rows="15">{{ old('body') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -54,8 +54,6 @@
                     
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="更新">   
-                        <input type="text" name=""/>
-                        <input type="submit" value="Submit"/>
                 </form>
             </div>
         </div>

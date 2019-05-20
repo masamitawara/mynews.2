@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-// 以下を追記することでNews Modelが扱えるようになる
+// 以下を追記することでProfiles Modelが扱えるようになる
 use App\Profiles;
 
 class ProfileController extends Controller
@@ -20,7 +20,7 @@ class ProfileController extends Controller
           // Varidationを行う
           $this->validate($request, Profiles::$rules);
     
-          $profile = new profile;
+          $profile = new profiles;
           $form = $request->all();
     
           // フォームから画像が送信されてきたら、保存して、$profiles->image_path に画像のパスを保存する
@@ -37,8 +37,8 @@ class ProfileController extends Controller
           unset($form['image']);
     
           // データベースに保存する
-          $profiles->fill($form);
-          $profiles->save();
+          $profile->fill($form);
+          $profile->save();
           
            //admin/profile/createにリダイレクトする
     return redirect('admin/profile/create');
