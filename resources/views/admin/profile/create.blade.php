@@ -22,35 +22,30 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">氏名(name)</label>
+                        <label class="col-md-2" for="name">氏名(name)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">性別(gender)</label>
+                        <label class="col-md-2" for="gender">性別(gender)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
+                            <input type="text" class="form-control" name="gender" value="{{ old('gender') }}">
                         </div>   
                     </div>       
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">趣味(hobby)</label>
+                        <label class="col-md-2" for="hobby">趣味(hobby)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
+                            <input type="text" class="form-control" name="hobby" value="{{ old('hobby') }}">
                         </div>
                     </div>        
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">自己紹介欄(introduction)</label>
+                        <label class="col-md-2" for="introduction">自己紹介欄(introduction)</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="15">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="introduction" rows="15">{{ old('introduction') }}</textarea>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="title">画像</label>
-                        <div class="col-md-10">
-                            <input type="file" class="form-control-file" name="image">
-                        </div>
-                    </div>
+                  
                     
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="更新">   
