@@ -140,10 +140,10 @@ return [
     'attributes' => [
         'title' => 'タイトル',
         'body' => '本文',
-        'neme'=>'名前',
+        'name'=>'名前',
         'gender'=>'性別',
         'hobby'=>'趣味',
-        'inroduction'=>'自己紹介欄',
+        'introduction'=>'自己紹介欄',
         
         ],
 ];
