@@ -71,7 +71,7 @@ class ProfileController extends Controller
            unset($profile_form['_token']);
            
            //該当するデータを上書きして保存する
-           $profile ->fill($profile_form)->save();
+           $profile->fill($profile_form)->save();
            
            return redirect('admin/profile');
        }

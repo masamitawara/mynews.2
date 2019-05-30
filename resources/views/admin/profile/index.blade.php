@@ -49,10 +49,10 @@
                                     <td>{{ str_limit($profile->introduction, 20) }}</td>
                                     <td>{{ str_limit($profile->created_at, 10) }}</td>
                                     <td>
-                                        <div>
+                                        <div class="green_bth">
                                             <a href="{{ action('Admin\ProfileController@edit',['id' => $profile->id]) }}">編集</a>
                                         </div>
-                                        <div>
+                                        <div class="red_bth">
                                             <a href="{{ action('Admin\ProfileController@delete', ['id' => $profile->id]) }}">削除</a>
                                         </div>
                                     </td>

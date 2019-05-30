@@ -33,8 +33,8 @@
                             <tr>
                                 <th width="10%">ID</th>
                                 <th width="20%">タイトル</th>
-                                <th width="50%">本文</th>
-                                <th width="10%">操作</th>
+                                <th width="45%">本文</th>
+                                <th width="15%">操作</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,11 +49,11 @@
                                     <td>{{ str_limit($news->title, 100) }}</td>
                                     <td>{{ str_limit($news->body, 250) }}</td>
                                     <td>
-                                    <div>
-                                        <a href="{{ action('Admin\NewsController@edit',['id' => $news->id]) }}">編集</a>
+                                    <div class="btn_wrap">
+                                        <a class="btn btn-success" href="{{ action('Admin\NewsController@edit',['id' => $news->id]) }}">編集</a>
                                     </div>
-                                    <div>
-                                        <a href="{{ action('Admin\NewsController@delete',['id' =>$news->id]) }}">削除</a>
+                                    <div class="btn_wrap">
+                                        <a class="btn btn-danger" href="{{ action('Admin\NewsController@delete',['id' =>$news->id]) }}">削除</a>
                                     </div>
                                     </td>
                                 </tr>
