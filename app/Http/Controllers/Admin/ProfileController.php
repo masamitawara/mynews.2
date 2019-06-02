@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Profile_History;
+use Carbon\Carbon;
 
 // 以下を追記することでProfiles Modelが扱えるようになる
 use App\Profiles;
@@ -55,7 +57,7 @@ class ProfileController extends Controller
     //Profiles Modelからデータを取得する
     $profile = Profiles::find($request->id);
     if (empty($profile)) {
-        abort(404); 
+        return view('errors.404'); 
        }
     return view('admin.profile.edit' , ['profile_form' => $profile]);
        }
@@ -73,8 +75,15 @@ class ProfileController extends Controller
            //該当するデータを上書きして保存する
            $profile->fill($profile_form)->save();
            
-           return redirect('admin/profile');
-       }
+           return redirect('admin/profile'); 
+       
+        $history = new Profile_History;
+        $history->profile_id = $profile->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
+
+        return redirect('admin/profile/');
+    }
        
        public function delete(Request $request)
   {

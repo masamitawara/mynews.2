@@ -33,10 +33,10 @@
                             <tr>
                                 <th width="5%">ID</th>
                                 <th width="10%">氏名(name)</th>
-                                <th width="10%">性別(gender)</th>
+                                <th width="5%">性別(gender)</th>
                                 <th width="10%">趣味(hobby)</th>
                                 <th width="25%">自己紹介欄(introduction)</th>
-                                <th width="20%">更新日時(created_at)</th>
+                                <th width="25%">更新日時(created_at)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,10 +49,10 @@
                                     <td>{{ str_limit($profile->introduction, 20) }}</td>
                                     <td>{{ str_limit($profile->created_at, 10) }}</td>
                                     <td>
-                                        <div class="green_bth">
+                                        <div class="btn_wrap green_bth">
                                             <a href="{{ action('Admin\ProfileController@edit',['id' => $profile->id]) }}">編集</a>
                                         </div>
-                                        <div class="red_bth">
+                                        <div class="btn_wrap red_bth">
                                             <a href="{{ action('Admin\ProfileController@delete', ['id' => $profile->id]) }}">削除</a>
                                         </div>
                                     </td>
