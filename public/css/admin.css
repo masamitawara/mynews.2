@@ -39,20 +39,3 @@ body {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.btn_wrap{
-  display:inline-block;
-}
-
-.green_bth a{
-  color:white;
-  padding:5px;
-  background:green;
-  border-radius:5px;
-}
-
-.red_bth a{
-  color:white;
-  padding:5px;
-  background:red;
-  border-radius:5px;
-}
