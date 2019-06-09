@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <hr color="#c0c0c0">
+        <hr color="#e73300c2">
         @if (!is_null($headline))
             <div class="row">
                 <div class="headline col-md-10 mx-auto">
@@ -15,7 +15,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p class="body mx-auto">{{ str_limit($headline->body, 650) }}</p>
+                            <p class="body mx-auto">{{ str_limit($headline->introduction, 650) }}</p>
                         </div>
                     </div>
                 </div>

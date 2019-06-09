@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\HTML;
 use App\News;
+use App\Profiles;
 
 class NewsController extends Controller
 {
@@ -36,9 +37,9 @@ class NewsController extends Controller
         
         // $cond_name が空白でない場合は、記事を検索して取得する
         if ($cond_name != '') {
-            $posts = News::where('name', $cond_name).orderBy('updated_at', 'desc')->get();
+            $posts = Profiles::where('name', $cond_name).orderBy('updated_at', 'desc')->get();
         } else {
-            $posts = News::all()->sortByDesc('updated_at');
+            $posts = Profiles::all()->sortByDesc('updated_at');
         }
 
         if (count($posts) > 0) {
