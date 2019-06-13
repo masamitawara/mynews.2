@@ -61,6 +61,12 @@
                             @endif
                         </tbody>
                     </table>
+                    
+                <div class="row">
+                <div class="col-md-12">
+                <a href="{{ action('NewsController@show',['id' => $news->id]) }}" role="button" class="btn btn-link">ホーム画面</a>
+                </div>
+                
                 </div>
             </div>
         </div>
